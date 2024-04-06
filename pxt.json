@@ -1,0 +1,32 @@
+{
+    "name": "balloon_sd",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "BME280": "github:makecode-extensions/bme280#v1.1.0",
+        "weatherbit": "github:sparkfun/pxt-weather-bit#v0.0.19",
+        "gatorEnvironment": "github:sparkfun/pxt-gator-environment#v1.1.2",
+        "envirobit": "github:pimoroni/pxt-envirobit#v0.0.5",
+        "pxt-PlanetX": "github:elecfreaks/pxt-planetx#v1.5.15",
+        "pxt-DS3231": "github:keble6/pxt-ds3231#v1.0.2"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "main.py"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "6.0.25",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
