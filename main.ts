@@ -22,7 +22,7 @@ serial.writeString(",")
 serial.writeString("Time")
 serial.writeLine("")
 loops.everyInterval(1000, function () {
-    reading = "" + weatherbit.temperature() / 100 + "," + weatherbit.pressure() / 25600 + "," + weatherbit.humidity() / 1024 + "," + weatherbit.altitude() + "," + DS3231.date() + "," + ("" + DS3231.hour() + ":" + DS3231.minute() + ":" + DS3231.second())
+    reading = "" + weatherbit.temperature() / 100 + "," + weatherbit.pressure() / 25600 + "," + weatherbit.humidity() / 1024 + "," + weatherbit.altitude() + "," + ("" + DS3231.date() + "/" + DS3231.month() + "/" + DS3231.year()) + "," + ("" + DS3231.hour() + ":" + DS3231.minute() + ":" + DS3231.second())
     serial.writeLine(reading)
 })
 basic.forever(function () {
