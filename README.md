@@ -5,20 +5,20 @@ We also created a PCP to connect the parts, though I imagine it could all work w
 
 # Components
 ## Minimum Components
-1. BBC Micro:bit v2 to control the project.
-2. Sparkfun BME280 module with QWIIC connector to read the atmospheric data.
-3. Sparkfun Micro:bit edge connector with QWIIC conntectors to connect the Micro:bit to the sensors and logger.
-4. Sparkfun Openlog to log the data to an SD card.
+1. **BBC Micro:bit v2** to control the project.
+2. **Sparkfun BME280** module with QWIIC connector to read the atmospheric data.
+3. **Sparkfun Micro:bit** edge connector with QWIIC conntectors to connect the Micro:bit to the sensors and logger.
+4. **Sparkfun Openlog** to log the data to an SD card.
 5. Generic DS3231 module to keep time.
 
 ## Additional Components for PCB
-1. Voltage Regulator. We used an AMS1117 3.3v regulator. However, an improvement may be to use a switching voltage regulator for better battery life.
-2. Capacitors for voltage regulator.
-3. Screw terminals. These are used to hold the battery wires for the power source.
-4. Female Header Pins. These are in case you want to easily remove the components.
+1. **Voltage Regulator.** We used an AMS1117 3.3v regulator. However, an improvement may be to use a switching voltage regulator for better battery life.
+2. **Capacitors** for voltage regulator.
+3. **Screw terminals.** These are used to hold the battery wires for the power source.
+4. **Female Header Pins.** These are in case you want to easily remove the components.
 
 # Issues with BME280
-I initially couldn't get the BME280 to work BME280 extenions in Makecode. However, it does work with Sparkfun's Weatherbit extension. That extension uses address 0x77, so you'll need to create a solder bridge to change the default address from 0x76.
+I initially couldn't get the BME280 to work with the BME280 extenions in Makecode. However, it does work with Sparkfun's *Weatherbit* extension. That extension uses address 0x77, so you'll need to create a solder bridge to change the default address from 0x76.
 
 
 > Open this page at [https://filledmilk.github.io/microbitweatherbaloon/](https://filledmilk.github.io/microbitweatherbaloon/)
