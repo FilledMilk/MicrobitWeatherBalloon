@@ -1,7 +1,7 @@
 # Background
 I put this together to help a middle school STEM class create an atmospheric monitoring module for a  weather balloon using easily programmable, off the shelf parts. All the parts are available from Sparkfun or Amazon (in the case of the DS3231 real time clock) and can be programmed using Microsoft Makecode.
 
-We also created a PCP to connect the parts, though I imagine it could all work with jumper wires.
+We also created a PCB to connect the parts, though I imagine it could all work with jumper wires.
 
 # Components
 ## Minimum Components
