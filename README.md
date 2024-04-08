@@ -1,18 +1,18 @@
 # Background
-I put this together to help a middle school STEM class create an atmospheric monitoring module for a  weather balloon using easily programmable, off the shelf parts. All the parts are available from Sparkfun and can be programmed using Microsoft Makecode.
+I put this together to help a middle school STEM class create an atmospheric monitoring module for a  weather balloon using easily programmable, off the shelf parts. All the parts are available from Sparkfun or Amazon (in the case of the DS3231 real time clock) and can be programmed using Microsoft Makecode.
 
 We also created a PCP to connect the parts, though I imagine it could all work with jumper wires.
 
 # Components
 ## Minimum Components
-1. BBC Micro:bit v2
-2. Sparkfun BME280 module with QWIIC connector.
-3. Sparkfun Micro:bit edge connector with QWIIC conntectors.
-4. Sparkfun Openlog.
-5. Generic DS3231 module.
+1. BBC Micro:bit v2 to control the project.
+2. Sparkfun BME280 module with QWIIC connector to read the atmospheric data.
+3. Sparkfun Micro:bit edge connector with QWIIC conntectors to connect the Micro:bit to the sensors and logger.
+4. Sparkfun Openlog to log the data to an SD card.
+5. Generic DS3231 module to keep time.
 
 ## Additional Components for PCB
-1. Voltage Regulator. We used an AMS1117 3.3v regulator
+1. Voltage Regulator. We used an AMS1117 3.3v regulator. However, an improvement may be to use a switching voltage regulator for better battery life.
 2. Capacitors for voltage regulator.
 3. Screw terminals. These are used to hold the battery wires for the power source.
 4. Female Header Pins. These are in case you want to easily remove the components.
