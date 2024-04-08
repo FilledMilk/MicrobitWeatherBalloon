@@ -9,7 +9,7 @@ We also created a PCP to connect the parts, though I imagine it could all work w
 2. **Sparkfun BME280** module with QWIIC connector to read the atmospheric data.
 3. **Sparkfun Micro:bit** edge connector with QWIIC conntectors to connect the Micro:bit to the sensors and logger.
 4. **Sparkfun Openlog** to log the data to an SD card.
-5. Generic DS3231 module to keep time.
+5. **Generic DS3231 module** to keep time.
 
 ## Additional Components for PCB
 1. **Voltage Regulator.** We used an AMS1117 3.3v regulator. However, an improvement may be to use a switching voltage converter for better battery life.
