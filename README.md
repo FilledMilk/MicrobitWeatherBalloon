@@ -14,16 +14,20 @@ We also created a PCB to connect the parts, though I imagine it could all work w
 ## Additional Components for PCB
 1. **Voltage Regulator.** We used an AMS1117 3.3v regulator. However, an improvement may be to use a switching voltage converter for better battery life.
 2. **Capacitors** for voltage regulator.
-3. **Screw terminals.** These are used to hold the battery wires for the power source.
+3. **3.5 mm Ptich Screw terminals.** These are used to hold the wires for the power source.
 4. **Female Header Pins.** These are in case you want to easily remove the components.
 
 # Issues with BME280
 I initially couldn't get the BME280 to work with the BME280 extenions in Makecode. However, it does work with Sparkfun's *Weatherbit* extension. That extension uses address 0x77, so you'll need to create a solder bridge to change the default address from 0x76.
 
+# Code Explanation
+In the *on start* block, we initialize the *Weatherbit* library, then redirect serial to pins 0 and 1 on the Micro:bit. Those are, in turn, connected to the RX and TX pins of the Openlog. We then write a single line to be the header of the *.csv* file.
+
+In the *every __* block, the code sets the variable *reading* with the applicable atmospheric readings and then writes the line to serial, and thus to the SD card, once per defined interval. 
 
 > Open this page at [https://filledmilk.github.io/microbitweatherbaloon/](https://filledmilk.github.io/microbitweatherbaloon/)
 
-## Use as Extension
+# Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
 
@@ -32,7 +36,7 @@ This repository can be added as an **extension** in MakeCode.
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/filledmilk/microbitweatherbaloon** and import
 
-## Edit this project
+# Edit this project
 
 To edit this repository in MakeCode.
 
