@@ -1,5 +1,5 @@
 # Background
-I put this together to help a middle school STEM class create an atmospheric monitoring module for a  weather balloon using easily programmable, off the shelf parts. All the parts are available from Sparkfun or Amazon (in the case of the DS3231 real time clock) and can be programmed using Microsoft Makecode.
+I put this together to help a middle school STEM class create an atmospheric monitoring module for a weather balloon using easily programmable, off the shelf parts. All the parts are available from Sparkfun or Amazon (in the case of the DS3231 real time clock) and can be programmed using Microsoft Makecode.
 
 We also created a PCB to connect the parts, though I imagine it could all work with jumper wires.
 
@@ -18,12 +18,12 @@ We also created a PCB to connect the parts, though I imagine it could all work w
 4. **Female Header Pins.** These are in case you want to easily remove the components.
 
 # Issues with BME280
-I initially couldn't get the BME280 to work with the BME280 extenions in Makecode. However, it does work with Sparkfun's *Weatherbit* extension. That extension uses address 0x77, so you'll need to create a solder bridge to change the default address from 0x76.
+I initially couldn't get the BME280 to work with the BME280 extenions in Makecode. However, it does work with Sparkfun's `Weatherbit` extension. That extension uses address 0x77, so you'll need to create a solder bridge to change the default address from 0x76.
 
 # Code Explanation
-In the *on start* block, we initialize the *Weatherbit* library, then redirect serial to pins 0 and 1 on the Micro:bit. Those are, in turn, connected to the RX and TX pins of the Openlog. We then write a single line to be the header of the *.csv* file.
+In the `on start` block, we initialize the `Weatherbit` library, then redirect serial to pins 0 and 1 on the Micro:bit. Those are, in turn, connected to the RX and TX pins of the Openlog. We then write a single line to be the header of the *.csv* file. If serial is not redirected to the pins, it is possible to write to serial over the USB and read it on a PC using Putty or another program, like Screen or Minicom on Linux, for testing purposes. 
 
-In the *every __* block, the code sets the variable *reading* with the applicable atmospheric readings and then writes the line to serial, and thus to the SD card, once per defined interval. 
+In the `every __` block, the code sets the variable `reading` with the applicable atmospheric readings and then writes the line to serial, and thus to the SD card, once per defined interval. 
 
 > Open this page at [https://filledmilk.github.io/microbitweatherbaloon/](https://filledmilk.github.io/microbitweatherbaloon/)
 
