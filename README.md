@@ -14,7 +14,7 @@ We also created a PCB to connect the parts, though I imagine it could all work w
 ## Additional Components for PCB
 1. **Voltage Regulator.** We used an AMS1117 3.3v regulator. However, an improvement may be to use a switching voltage converter for better battery life.
 2. **Capacitors** for voltage regulator.
-3. **3.5 mm Ptich Screw terminals.** These are used to hold the wires for the power source.
+3. **3.5 mm Pitch Screw Terminals.** These are used to hold the wires for the power source.
 4. **Female Header Pins.** These are in case you want to easily remove the components.
 
 # Issues with BME280
