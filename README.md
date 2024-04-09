@@ -5,20 +5,25 @@ We also created a PCB to connect the parts, though I imagine it could all work w
 
 # Components
 ## Minimum Components
-1. **BBC Micro:bit v2** to control the project.
+1. **BBC Micro:bit v2** to control the project. A v1 Micro:bit will also work.
 2. **Sparkfun BME280** module with QWIIC connector to read the atmospheric data.
 3. **Sparkfun Micro:bit** edge connector with QWIIC conntectors to connect the Micro:bit to the sensors and logger.
 4. **Sparkfun Openlog** to log the data to an SD card.
 5. **Generic DS3231 module** to keep time.
 
 ## Additional Components for PCB
-1. **Voltage Regulator.** We used an AMS1117 3.3v regulator. However, an improvement may be to use a switching voltage converter for better battery life.
+1. **Voltage Regulator.** We used an AMS1117 3.3v regulator. However, an improvement may be to use a switching voltage converter for better battery life. Since the AMS1117 cost less than a dollar and the balloon would only travel for a few hours, we opted for the AMS1117.  
 2. **Capacitors** for voltage regulator.
 3. **3.5 mm Pitch Screw Terminals.** These are used to hold the wires for the power source.
 4. **Female Header Pins.** These are in case you want to easily remove the components.
 
 # Issues with BME280
-I initially couldn't get the BME280 to work with the BME280 extenions in Makecode. However, it does work with Sparkfun's `Weatherbit` extension. That extension uses address 0x77, so you'll need to create a solder bridge to change the default address from 0x76.
+I initially couldn't get the BME280 to work with the BME280 extenions in Makecode. However, it does work with Sparkfun's `Weatherbit` extension. That extension uses address 0x77, so you'll need to create a solder bridge on the back of the breakout board to change the default address from 0x76.
+
+# Potential Improvements
+1. Add pads to connect other sensors.
+2. Add reverse polarity circuit.
+3. Add JST connector for power source.
 
 # Code Explanation
 In the `on start` block, we initialize the `Weatherbit` library, then redirect serial to pins 0 and 1 on the Micro:bit. Those are, in turn, connected to the RX and TX pins of the Openlog. We then write a single line to be the header of the *.csv* file. If serial is not redirected to the pins, it is possible to write to serial over the USB and read it on a PC using Putty or another program, like Screen or Minicom on Linux, for testing purposes. 
