@@ -23,7 +23,7 @@ I initially couldn't get the BME280 to work with the BME280 extenions in Makecod
 # Code Explanation
 In the `on start` block, we initialize the `Weatherbit` library, then redirect serial to pins 0 and 1 on the Micro:bit. Those are, in turn, connected to the RX and TX pins of the Openlog. We then write a single line to be the header of the *.csv* file. If serial is not redirected to the pins, it is possible to write to serial over the USB and read it on a PC using Putty or another program, like Screen or Minicom on Linux, for testing purposes. 
 
-In the `every __` block, the code sets the variable `reading` with the applicable atmospheric readings and then writes the line to serial, and thus to the SD card, once per defined interval. 
+In the `every __` block, the code sets the variable `reading` with the applicable atmospheric readings and then writes the line to serial, and thus to the SD card, once per defined interval. The arithmetic operations are explained on the [Sparkfun site] (https://learn.sparkfun.com/tutorials/microclimate-kit-experiment-guide/experiment-1-reading-the-temperature-humidity-and-pressure "Sparkfun's Weatherbit Tutorial").
 
 > Open this page at [https://filledmilk.github.io/microbitweatherbaloon/](https://filledmilk.github.io/microbitweatherbaloon/)
 
