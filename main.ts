@@ -5,7 +5,7 @@ SerialPin.P0,
 SerialPin.P1,
 BaudRate.BaudRate9600
 )
-basic.pause(100)
+basic.pause(500)
 serial.writeString("Temperature")
 serial.writeString(",")
 serial.writeString("Pressure")
