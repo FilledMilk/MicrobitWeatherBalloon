@@ -20,6 +20,9 @@ We also created a PCB to connect the parts, though I imagine it could all work w
 # Issues with BME280
 I initially couldn't get the BME280 to work with the BME280 extenions in Makecode. However, it does work with Sparkfun's `Weatherbit` extension. That extension uses address 0x77, so you'll need to create a solder bridge on the back of the breakout board to change the default address from 0x76.
 
+# PCB Design and Manufacture
+The PCB was designed with EasyEDA and manufactured by JLCPCB. EasyEDA's web interface seems fairly easy to use, and it is integrated with JLCPCB which makes the ordering process farily painless. The SMD components were purchased through Digikey and eBay.
+
 # Potential Improvements
 1. Add pads to connect other sensors.
 2. Add reverse polarity circuit.
